@@ -1,7 +1,6 @@
 ### 基于react + vite的基础开发框架配置
 
 #### TODO
-- 路径别名配置
 - axios二次封装
 - 路由配置
 - flooks状态管理
