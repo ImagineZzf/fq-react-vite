@@ -1,6 +1,10 @@
-import { Router } from 'react-router-dom'
-import Routes from '@/router'
+import { BrowserRouter } from 'react-router-dom'
+import CustomRouter from '@/router'
 
 export default () => {
-  return Routes
+  return (
+    <BrowserRouter>
+      <CustomRouter />
+    </BrowserRouter>
+  )
 }

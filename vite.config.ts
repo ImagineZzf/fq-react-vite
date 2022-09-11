@@ -1,7 +1,8 @@
 import { defineConfig, PluginOption } from 'vite'
 import path from 'path'
 import react from '@vitejs/plugin-react'
-import { visualizer } from 'rollup-plugin-visualizer'
+// import { visualizer } from 'rollup-plugin-visualizer'
+import dynamicImport from 'vite-plugin-dynamic-import'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -9,12 +10,13 @@ export default defineConfig(({ command, mode }) => {
 
   let plugins: PluginOption[] = [
     react(),
+    dynamicImport(), // 动态导入
   ]
 
   if (IS_BUILD) {
     plugins = [
       ...plugins,
-      visualizer(), // 打包分析，可额外配置参数
+      // visualizer(), // 打包分析，可额外配置参数
     ]
   }
 
