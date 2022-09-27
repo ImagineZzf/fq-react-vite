@@ -6,7 +6,5 @@
 - ahooks
 - antd 配置
 - less配置
-- fq-utils实验
-- fq-utils增加声明文件
 - 打包优化调试
 - useContext学习
