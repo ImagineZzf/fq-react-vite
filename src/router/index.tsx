@@ -12,6 +12,10 @@ export const routes: RouteObject[] = [
   {
     path: '/',
     element: loadView('Index')
+  },
+  {
+    path: '/test',
+    element: loadView('Test') // 测试用的页面
   }
 ]
 

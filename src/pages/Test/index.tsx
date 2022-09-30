@@ -14,7 +14,7 @@ export default () => {
   
   return (
     <>
-      <Button type="primary" onClick={() => state.page++}>按钮1</Button>
+      <Button type="primary" onClick={() => state.page++}>按钮2</Button>
       <p className={[style.p, style.test]}>{state.page}</p>
     </>
   )
