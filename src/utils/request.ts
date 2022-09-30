@@ -1,4 +1,5 @@
 import axios from 'axios'
+import storage from './storage'
 
 interface requestErrorInterface {
   status?: number,
@@ -23,18 +24,17 @@ const instance = axios.create({
 
 // 请求前置拦截器
 instance.interceptors.request.use((config) => {
-  // TODO: getStorage从utils中获取
-  // const token = getStorage()
+  const token = storage.get('token') as string
 
-  // if (!token) {
-  //   // 判断是否有token，没有则跳转登录
-  //   goToLogin()
-  // } else {
-  //   config.headers = {
-  //     ...config.headers,
-  //     Authorization: `Bearer ${token}`
-  //   }
-  // }
+  if (!token) {
+    // TODO: 判断是否有token，没有则跳转登录
+    
+  } else {
+    config.headers = {
+      ...config.headers,
+      Authorization: `Bearer ${token}`
+    }
+  }
   return config
 
 })
