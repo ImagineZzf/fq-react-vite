@@ -1,0 +1,26 @@
+// 单行超出隐藏
+.ellipsis(@w: auto) {
+  width: @w;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+// 单行超出隐藏【最大宽度】
+.ellipsisMax(@w: auto) {
+  max-width: @w;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+// 多行超出隐藏
+.ellipsisLn(@line: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+}
